@@ -51,9 +51,24 @@
 	</head>
 	<body>
 		<h1>῾👁</h1>
-		<img src="backfat.gif" />
-		<h1>Dedicated to the one Bug and to all bug kind.</h1>
+		<img id="image" />
+		<h1 id="message">Dedicated to the one Bug and to all bug kind.</h1>
 		<h1>ms ms ms</h1>
-		
 	</body>
+	<script>
+		var date = new Date();
+		var hour = date.getHours();
+		
+		if hour >= 6 && hour <= 21 {
+			
+			document.getElementById("image").setAttribute("src", "backfat.gif");
+			document.getElementById("message").textContent = "Dedicated to the one Bug and to all bug kind."
+			
+		} else {
+			
+			document.getElementById("image").setAttribute("src", "sleeping.gif");
+			document.getElementById("message").textContent = "Sry, Sleeping Now. Back later..."
+			
+		}
+	</script>
 </html>
